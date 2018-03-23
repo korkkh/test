@@ -5,14 +5,9 @@
 	}
 </style>
 <?php
-<<<<<<< HEAD
-// 상점아아디
-$store = $_GET['s']; // 수정 필요 확인
-=======
 // 상점아아디 를 받아온다.
-$store = (isset($_GET['s'])) ? $_GET['s'] : '';	// 상점
-$instagram = (isset($_GET['i'])) ? "&i={$_GET['i']}" : ''; // 인스타그램
->>>>>>> bdba0255793610188deaa207742cef7abe17429c
+$store = $_GET['s'];	// 상점
+$instagram = "&i={$_GET['i']}"; // 인스타그램
 
 switch ($store) {
 	// 테스트 상점을 위한 처리
@@ -40,7 +35,7 @@ switch ($store) {
 					if(messageEvent.data["iframe"]) {
 						// 헤시테그 메세지 전달 추가 2018-03-20 : messageEvent.data["hashtag"]
 						var hashtag = '';
-						if(messageEvent.data["hashtag"]) hashtag = messageEvent.data["hashtag"];
+						if(messageEvent.data["hashtag"]) hashtag = messageEvent.data["hashtag"];	// 해시테그
 						document.location.href = 'http://' + guestDomain + '/bframe/popup/bmine_m?s=bmine&m=' + messageEvent.data["iframe"] + '&h=' + hashtag + '&close_url=' + document.location.href;
 					}
 					else {
