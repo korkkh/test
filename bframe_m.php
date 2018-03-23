@@ -11,7 +11,7 @@ $store = (isset($_GET['s'])) ? $_GET['s'] : '';	// 상점2
 $instagram = (isset($_GET['i'])) ? "&i={$_GET['i']}" : ''; // 인스타그램2
 
 /*
-브렌치 테스트 완료
+브렌치 테스트
 */
 $test = $_GET['t'];
 echo $test;
