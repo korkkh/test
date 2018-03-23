@@ -7,8 +7,8 @@
 </style>
 <?php
 // 상점아아디 를 받아온다.
-$store = (isset($_GET['s'])) ? $_GET['s'] : '';	// 상점
-$instagram = (isset($_GET['i'])) ? "&i={$_GET['i']}" : ''; // 인스타그램
+$store = (isset($_GET['s'])) ? $_GET['s'] : '';	// 상점2
+$instagram = (isset($_GET['i'])) ? "&i={$_GET['i']}" : ''; // 인스타그램2
 
 /*
 브렌치 테스트
