@@ -1,3 +1,4 @@
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <style type="text/css">
 	body {
 		margin: 0;
@@ -6,14 +7,13 @@
 </style>
 <?php
 // 상점아아디 를 받아온다.
-$store = $_GET['s'];	// 상점
-$instagram = "&i={$_GET['i']}"; // 인스타그램
+$store = (isset($_GET['s'])) ? $_GET['s'] : '';	// 상점
+$instagram = (isset($_GET['i'])) ? "&i={$_GET['i']}" : ''; // 인스타그램
 
 switch ($store) {
 	// 테스트 상점을 위한 처리
 	case 'bmine':
 		?>
-		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<div style="width: 1px; min-width:100%; *width: 100%; position:relative;">
 			<iframe id="Bframe" name="Bframe" src="http://test.be.show/bframe/content/bmine_m?s=bmine" frameborder="0" scrolling="no" style="min-width: 100%;width: 100%;"></iframe>
@@ -33,10 +33,10 @@ switch ($store) {
 			function onMessage(messageEvent) {
 				if(messageEvent.origin == "http://" + guestDomain) {
 					if(messageEvent.data["iframe"]) {
-						// 헤시테그 메세지 전달 추가 2018-03-20 : messageEvent.data["hashtag"]
-						var hashtag = '';
-						if(messageEvent.data["hashtag"]) hashtag = messageEvent.data["hashtag"];	// 해시테그
-						document.location.href = 'http://' + guestDomain + '/bframe/popup/bmine_m?s=bmine&m=' + messageEvent.data["iframe"] + '&h=' + hashtag + '&close_url=' + document.location.href;
+						// 2018-03-20 헤시테그 메세지 전달 추가 : messageEvent.data["hashtag"]
+						var hash_tag = '';
+						if(messageEvent.data["hashtag"]) hash_tag = messageEvent.data["hashtag"];	// 해시테그
+						document.location.href = 'http://' + guestDomain + '/bframe/popup/bmine_m?s=bmine&m=' + messageEvent.data["iframe"] + '&h=' + hash_tag + '&close_url=' + document.location.href;
 					}
 					else {
 						document.body.style.overflow = "auto";
