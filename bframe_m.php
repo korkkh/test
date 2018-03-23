@@ -6,14 +6,9 @@
 	}
 </style>
 <?php
-<<<<<<< HEAD
-// 상점아아디
-$store = $_GET['s']; // 수정 필요 확인
-=======
 // 상점아아디 를 받아온다.
 $store = (isset($_GET['s'])) ? $_GET['s'] : '';	// 상점
 $instagram = (isset($_GET['i'])) ? "&i={$_GET['i']}" : ''; // 인스타그램
->>>>>>> bdba0255793610188deaa207742cef7abe17429c
 
 switch ($store) {
 	// 테스트 상점을 위한 처리
