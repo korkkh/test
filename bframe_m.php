@@ -5,8 +5,9 @@
 	}
 </style>
 <?php
-// 상점아아디
-$store = $_GET['s'];
+// 상점아아디 를 받아온다.
+$store = (isset($_GET['s'])) ? $_GET['s'] : '';
+$instagram = (isset($_GET['i'])) ? "&i={$_GET['i']}" : '';
 
 switch ($store) {
 
