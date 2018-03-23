@@ -13,6 +13,8 @@ $instagram = (isset($_GET['i'])) ? "&i={$_GET['i']}" : ''; // 인스타그램
 /*
 브렌치 테스트
 */
+$test = $_GET['t'];
+echo $test;
 
 switch ($store) {
 	// 테스트 상점을 위한 처리
