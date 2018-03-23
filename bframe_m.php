@@ -5,6 +5,7 @@
 	}
 </style>
 <?php
+// 상점아아디
 $store = $_GET['s'];
 
 switch ($store) {
