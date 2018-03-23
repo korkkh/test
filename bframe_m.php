@@ -6,10 +6,10 @@
 </style>
 <?php
 // 상점아아디
-$store = $_GET['s']; // 수정 필요
+$store = $_GET['s']; // 수정 필요 확인
 
 switch ($store) {
-	// 테스트 상점
+	// 테스트 상점을 위한 처리
 	case 'bmine':
 		?>
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
