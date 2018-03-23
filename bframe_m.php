@@ -35,7 +35,7 @@ switch ($store) {
 					if(messageEvent.data["iframe"]) {
 						// 2018-03-20 헤시테그 메세지 전달 추가 : messageEvent.data["hashtag"]
 						var hashtag = '';
-						if(messageEvent.data["hashtag"]) hashtag = messageEvent.data["hashtag"];
+						if(messageEvent.data["hashtag"]) hashtag = messageEvent.data["hashtag"];	// 해시테그
 						document.location.href = 'http://' + guestDomain + '/bframe/popup/bmine_m?s=bmine&m=' + messageEvent.data["iframe"] + '&h=' + hash_tag + '&close_url=' + document.location.href;
 					}
 					else {
