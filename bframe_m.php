@@ -6,7 +6,7 @@
 </style>
 <?php
 // 상점아아디
-$store = $_GET['s'];
+$store = $_GET['s']; // 수정 필요
 
 switch ($store) {
 	// 테스트 상점
