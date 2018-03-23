@@ -11,7 +11,7 @@ $store = (isset($_GET['s'])) ? $_GET['s'] : '';	// 상점
 $instagram = (isset($_GET['i'])) ? "&i={$_GET['i']}" : ''; // 인스타그램
 
 switch ($store) {
-	// 테스트 상점을 위한 처리
+	// 테스트 상점을 위한 처리 수정
 	case 'bmine':
 		?>
 		<meta name="apple-mobile-web-app-capable" content="yes">
