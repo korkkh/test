@@ -10,6 +10,10 @@
 $store = (isset($_GET['s'])) ? $_GET['s'] : '';	// 상점
 $instagram = (isset($_GET['i'])) ? "&i={$_GET['i']}" : ''; // 인스타그램
 
+/*
+브렌치 테스트
+*/
+
 switch ($store) {
 	// 테스트 상점을 위한 처리
 	case 'bmine':
